@@ -1,42 +1,85 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-}
-
-header {
-    background-color: #333;
+    background: linear-gradient(135deg, #3b8d99, #6b0f1a);
     color: white;
-    padding: 1rem;
-    text-align: center;
 }
 
-nav ul {
-    list-style: none;
+/* Navigation Styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+nav .nav-left h1 {
+    margin: 0;
+    font-size: 24px;
+    color: white;
+}
+
+nav .nav-right ul {
+    list-style-type: none;
+    margin: 0;
     padding: 0;
+    display: flex;
+    gap: 20px;
 }
 
-nav ul li {
+nav .nav-right ul li {
     display: inline;
-    margin: 0 1rem;
 }
 
-nav ul li a {
+nav .nav-right ul li a {
     color: white;
     text-decoration: none;
+    font-size: 18px;
 }
 
+nav .nav-right ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Sections */
 section {
-    padding: 2rem;
-    margin: 2rem 0;
+    padding: 60px 20px;
+    background-color: white;
+    color: #333;
+}
+
+section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 18px;
+}
+
+.project {
+    margin: 20px 0;
+}
+
+.project h3 {
+    font-size: 24px;
+}
+
+.project p {
+    font-size: 16px;
+    color: #555;
 }
 
 footer {
-    background-color: #333;
+    background-color: #222;
+    padding: 20px;
     color: white;
     text-align: center;
-    padding: 1rem;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }
