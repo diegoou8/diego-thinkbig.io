@@ -31,8 +31,8 @@
             <div class="about-text">
                 <h2>Hey, I'm Diego</h2>
                 <p>
-                    I am a data-driven entrepreneur and Data Scientist with a robust background in Petroleum Engineering. Over the past 7 years, I have been leading transformative digital marketing initiatives across the Oil & Gas, E-commerce, and Gastronomy sectors. As the CEO of Thinkbig, a data-driven digital marketing agency, I have spearheaded innovative strategies that not only amplify business growth but also enrich customer experiences and optimize operational efficiency. My expertise lies in leveraging data analytics to identify hidden opportunities, craft tailored marketing solutions, and drive sustainable revenue growth. I am deeply passionate about using data as a powerful tool to solve complex challenges, fuel innovation, and deliver measurable impact.
-                </p>
+                    I am an enthusiastic Data Scientist and Data Analytics expert, driven by a passion for uncovering the stories hidden within data. For the past 7 years, I have been at the helm of Thinkbig, a data-driven digital marketing agency, where I've had the privilege of leading a talented team in transforming businesses across various industries. What excites me most is the ability to collaborate and apply data analytics to diverse projects in energy, healthcare, and business analysis, turning insights into impactful actions. Let's think big and create something extraordinary together!
+                </p>                
                 <div class="about-buttons">
                     <a href="#contact" class="btn contact-btn">Contact Me</a>
                     <a href="resume.pdf" class="btn resume-btn">Resume</a>
@@ -119,19 +119,21 @@
         function checkSkillsInView() {
             const skillsSection = document.getElementById('skills');
             const sectionPosition = skillsSection.getBoundingClientRect().top;
-            const screenPosition = window.innerHeight / 1.3;
-    
+            const screenPosition = window.innerHeight;
+
             if (sectionPosition < screenPosition) {
                 skillLevels.forEach(skill => {
                     const level = skill.getAttribute('data-level');
                     skill.style.width = level;
+                    skill.style.transition = "width 3s ease-in-out"; // Slower animation
                 });
                 window.removeEventListener('scroll', checkSkillsInView);
             }
         }
-    
+
         window.addEventListener('scroll', checkSkillsInView);
+        checkSkillsInView(); // Check immediately in case the section is already in view
     });
-    </script>
+</script>
 
 </html>
